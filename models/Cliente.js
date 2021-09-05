@@ -1,6 +1,6 @@
-const mongosse = require('mongoose');
+const mongoose = require('mongoose');
 
-const ClienteSchema = mongosse.Schema({
+const ClientesSchema = mongoose.Schema({
     nombre: {
         type: String,
         required: true,
@@ -10,7 +10,7 @@ const ClienteSchema = mongosse.Schema({
         type: String,
         required: true,
         trim: true
-    },
+    }, 
     empresa: {
         type: String,
         required: true,
@@ -24,17 +24,18 @@ const ClienteSchema = mongosse.Schema({
     },
     telefono: {
         type: String,
-        trim: true,
+        trim: true
     },
     creado: {
         type: Date,
-        default: Date.now()
-    },
+        default: Date.now() 
+    }, 
     vendedor: {
-        type: mongosse.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId, 
         required: true,
         ref: 'Usuario'
     }
+
 });
 
-module.exports = mongosse.model('Cliente', ClienteSchema);
+module.exports = mongoose.model('Cliente', ClientesSchema);
