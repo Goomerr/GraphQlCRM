@@ -1,22 +1,23 @@
 {
   "name": "crmgraphqlcurso",
   "version": "1.0.0",
-  "description": "Curso de GraphQL",
+  "description": "Creación de un crm con GraphQl",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
-    "dev": "nodemon ."
+    "start": "node",
+    "dev": "nodemon"
   },
-  "author": "Juan De la torre",
+  "author": "Jose Gomez",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.11.0",
+    "apollo-server": "^3.1.2",
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.7"
+    "mongoose": "^5.13.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.12"
   }
 }
