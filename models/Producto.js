@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongosse = require('mongoose');
 
-const ProductosSchema = mongoose.Schema({
+const ProductosSchema = mongosse.Schema({
     nombre: {
         type: String,
         required: true,
@@ -15,13 +15,14 @@ const ProductosSchema = mongoose.Schema({
         type: Number,
         required: true,
         trim: true
-    }, 
+    },
     creado: {
         type: Date,
-        default: Date.now() 
+        default: Date.now()
     }
 });
 
-ProductosSchema.index({ nombre: 'text' });
+//Crear un indice para la búsqueda de productos
+ProductosSchema.index({nombre: 'text'});
 
-module.exports = mongoose.model('Producto', ProductosSchema);
+module.exports = mongosse.model('Producto', ProductosSchema);
